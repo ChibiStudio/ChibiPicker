@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChibiPickerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-5D-hbz">
+                                <rect key="frame" x="87" y="237" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Xr0-qW-ius"/>
+                                    <constraint firstAttribute="height" constant="240" id="paA-Be-1r6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-Ej-xkQ">
+                                <rect key="frame" x="167" y="485" width="80" height="30"/>
+                                <state key="normal" title="Pick a Chibi"/>
+                                <connections>
+                                    <action selector="pickChibi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evS-ge-XtY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P7d-Ej-xkQ" firstAttribute="top" secondItem="QKU-5D-hbz" secondAttribute="bottom" constant="8" id="G5b-gF-3Cy"/>
+                            <constraint firstItem="P7d-Ej-xkQ" firstAttribute="centerX" secondItem="QKU-5D-hbz" secondAttribute="centerX" id="TpM-yW-ugF"/>
+                            <constraint firstItem="QKU-5D-hbz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZTA-jb-yIc"/>
+                            <constraint firstItem="QKU-5D-hbz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="efa-Ec-UQr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chibiContainer" destination="QKU-5D-hbz" id="ZrI-C2-HzF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
