@@ -2,11 +2,11 @@
 
 Allows apps to let their user pick chibis from [ChibiStudio](https://apps.apple.com/app/chibistudio-avatar-maker/id1135307199).
 
-![demo](./demo.gif)
+<img src="./demo.gif" width="20%"/>
 
 # Using the ChibiStudio picker API
 
-Since version 2.6, ChibiStudio offers a way for other apps to get content from the app. This is especially useful if users can pick avatars in your app and you’d like for them to be able to access their chibis and use them as avatars, but it can be used with any app that works with images.
+Since **version 2.6**, ChibiStudio offers a way for other apps to get content from the app. This is especially useful if users can pick avatars in your app and you’d like for them to be able to access their chibis and use them as avatars, but it can be used with any app that works with images.
 
 Here’s how the feature works:
 - Your app checks to see if ChibiStudio is installed
@@ -24,7 +24,7 @@ You’ll also need a custom URL scheme. If your app already has a custom URL sch
 
 ## Opening the chibi picker
 
-To open the chibi picker, just call `ChibiPicker.shared. pickChibi(with:)` method. The completion handler is called with an `UIImage` when the user goes back to your app after interacting with ChibiStudio. If the value in the completion is `nil`, it means that the user hasn’t picked a chibi or that ChibiStudio is not installed, or couldn’t be opened.
+To open the chibi picker, just call `ChibiPicker.shared.pickChibi(with:)` method. The completion handler is called with an `UIImage` when the user goes back to your app after interacting with ChibiStudio. If the value in the completion is `nil`, it means that the user hasn’t picked a chibi or that ChibiStudio is not installed, or couldn’t be opened.
 
 Keep in mind that this completion handler may not be called if the user leaves the app without doing any action, so don’t block your user interface while waiting for a chibi to arrive.
 
